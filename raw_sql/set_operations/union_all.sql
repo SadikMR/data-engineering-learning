@@ -1,3 +1,5 @@
+/* Allows duplicate value */
+
 SELECT employee_name
 FROM employees
 WHERE salary > 150000
