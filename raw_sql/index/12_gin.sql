@@ -18,6 +18,11 @@
 -- );
 --
 -- Query:
+CREATE INDEX idx_articles_tags
+ON articles
+USING GIN(tags);
+
+EXPLAIN
 SELECT *
 FROM articles
 WHERE tags @> ARRAY['postgres'];
